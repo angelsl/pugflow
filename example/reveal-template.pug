@@ -8,6 +8,7 @@ html
     link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/reveal.js@4.2.1/dist/reset.css')
     link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/reveal.js@4.2.1/dist/reveal.css')
     link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/reveal.js@4.2.1/dist/theme/black.css')
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/asciinema-player@3.0.0-rc.1/dist/bundle/asciinema-player.css')
 
   body
     .reveal
@@ -17,15 +18,22 @@ html
             p Empty presentation.
     script(type='module').
       // Hack to make Parcel avoid trying to bundle this import entirely
-      eval("import('https://cdn.jsdelivr.net/npm/reveal.js@4.2.1/dist/reveal.esm.js')").then(({ default: Reveal }) => Reveal.initialize({
-        slideNumber: true,
-        fragmentInURL: true,
-        transitionSpeed: "fast",
-        hash: true,
-        navigationMode: "linear",
-        transition: "fade",
-        pdfSeparateFragments: false,
-        highlight: {
-          escapeHTML: false
-        }
-      }));
+      eval("import('https://cdn.jsdelivr.net/npm/reveal.js@4.2.1/dist/reveal.esm.js')").then(({ default: Reveal }) => {
+        Reveal.initialize({
+          slideNumber: true,
+          fragmentInURL: true,
+          transitionSpeed: "fast",
+          hash: true,
+          navigationMode: "linear",
+          transition: "fade",
+          pdfSeparateFragments: false,
+          highlight: {
+            escapeHTML: false
+          }
+        });
+      });
+      eval("import('https://cdn.jsdelivr.net/npm/asciinema-player@3.0.0-rc.1/+esm')").then(({ create }) => {
+        document.querySelectorAll(".asciinema").forEach(e => {
+          create(e.dataset.src, e, { theme: e.dataset.theme || "monokai" });
+        });
+      });
