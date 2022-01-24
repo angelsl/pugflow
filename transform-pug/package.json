@@ -6,6 +6,9 @@
   "engines": {
     "parcel": "2.x"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@parcel/plugin": "^2.2.1",
     "pug": "^3.0.2",
