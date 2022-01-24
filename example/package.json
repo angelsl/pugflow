@@ -1,0 +1,9 @@
+{
+  "name": "@angelsl/pugflow-example",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "parcel": "^2.2.1",
+    "@angelsl/parcel-config-pugflow": "^0.0.1"
+  }
+}

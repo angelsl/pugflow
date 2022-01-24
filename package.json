@@ -1,0 +1,9 @@
+{
+  "name": "@angelsl/pugflow-packages",
+  "private": true,
+  "workspaces": [
+    "config",
+    "transform-pug",
+    "example"
+  ]
+}

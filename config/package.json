@@ -1,0 +1,11 @@
+{
+  "name": "@angelsl/parcel-config-pugflow",
+  "main": "index.json",
+  "version": "0.0.1",
+  "engines": {
+    "parcel": "2.x"
+  },
+  "dependencies": {
+    "@angelsl/parcel-transformer-pugflow": "^0.0.1"
+  }
+}

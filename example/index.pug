@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    title Hello world!
+  body
+    p Hello! This is an example Pug document!
+    p Obviously, all the usual features of Pug work.
+    p But we have a few filters:
+    :md
+      ## Markdown!!
+
+      We use [micromark](https://github.com/micromark/micromark) with its [GFM extension](https://github.com/micromark/micromark-extension-gfm)
+      to compile Markdown.
+
+      Links are automatically linkified: https://google.com
+
+      ```cpp
+      if (x < 1) {
+        return 2;
+      }
+      ```
+    h2 Back to HTML
+    p To include code, you could just use Markdown. But if you are not, you can use the :escape filter if your code has ampersands or angle brackets:
+    pre: code: :escape
+      if (x < 1) {
+        return 2;
+      }
+    p Or you can use the :code filter, which will syntax-highlight and escape:
+    :code(cpp)
+      if (x < 1) {
+        return 2; // test
+      }
+

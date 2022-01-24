@@ -1,0 +1,19 @@
+{
+  "name": "@angelsl/parcel-transformer-pugflow",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "index.js",
+  "engines": {
+    "parcel": "2.x"
+  },
+  "dependencies": {
+    "@parcel/plugin": "^2.2.1",
+    "pug": "^3.0.2",
+    "pug-runtime": "^3.0.1",
+    "remark-gfm": "^3.0.1",
+    "remark-html": "^15.0.1",
+    "remark-parse": "^10.0.1",
+    "shiki": "^0.10.0",
+    "unified": "^10.1.1"
+  }
+}
