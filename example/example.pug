@@ -1,0 +1,21 @@
+extends template.pug
+
+block title
+  title Reveal.js example
+
+block slides
+  section
+    h1 Reveal.js example
+  section
+    p This is an example of slides using Pug and Reveal.js
+  section: :md
+    ## You can use Markdown!
+
+    It works!
+
+    ```c
+    if (x > 1) {
+      _exit(1);
+    }
+  section
+    div.asciinema(data-src="hello.json")
