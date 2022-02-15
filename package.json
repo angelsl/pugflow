@@ -1,0 +1,20 @@
+{
+  "name": "pugflow",
+  "version": "0.0.2",
+  "main": "main.js",
+  "repository": "https://github.com/angelsl/pugflow",
+  "author": "angelsl",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.27.7",
+    "pug": "^3.0.2",
+    "pug-runtime": "^3.0.1",
+    "remark": "^14.0.2",
+    "remark-gfm": "^3.0.1",
+    "remark-html": "^15.0.1",
+    "remark-parse": "^10.0.1",
+    "shiki": "^0.10.0",
+    "unified": "^10.1.1"
+  },
+  "bin": "./main.js"
+}
